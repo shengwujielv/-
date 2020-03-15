@@ -1,0 +1,54 @@
+} 
+
+
+//  计算公式 
+int Number(int nowyear,int leapYearNumber,int birthyear,int birthToDay,int nowToDay){ 
+	int num = (nowyear-birthyear)*365+leapYearNumber-(birthToDay)+nowToDay;
+	return num;
+}
+
+//1月1日至测定天数
+
+int Day(int month,int day){
+	int birthyear,birthday,birthmouth;
+	int Day;
+	switch(month) {
+        case 1: Day=day;break;
+        case 2: Day=31+day;break;
+        case 3: Day=(31+28)+day;break;
+        case 4: Day=(31+28+31)+day;break;
+        case 5: Day=(31+31+30+28)+day;break;
+        case 6: Day=(31+28+31+30+31)+day;break;
+        case 7: Day=(31+28+31+30+31+30)+day;break;
+        case 8: Day=(31+28+31+30+31+30+31)+day;break;
+        case 9: Day=(31+28+31+30+31+30+31+31)+day;break;
+        case 10: Day=(31+28+31+30+31+30+31+31+30)+day;break;
+        case 11: Day=(31+28+31+30+31+30+31+31+30+31)+day;break;
+        case 12: Day=(31+28+31+30+31+30+31+31+30+31+30)+day;break;
+
+    }
+}
+//1月1日至生日天数
+int DDay(int birthyear,int birthmonth,int birthday,int sum){
+	int DDay;
+	switch(birthmonth) {
+        case 1: DDay=birthday;break;
+        case 2: DDay=31+birthday;break;
+        case 3: DDay=(31+28)+birthday;break;
+        case 4: DDay=(31+28+31)+birthday;break;
+        case 5: DDay=(31+31+30+28)+birthday;break;
+        case 6: DDay=(31+28+31+30+31)+birthday;break;
+        case 7: DDay=(31+28+31+30+31+30)+birthday;break;
+        case 8: DDay=(31+28+31+30+31+30+31)+birthday;break;
+        case 9: DDay=(31+28+31+30+31+30+31+31)+birthday;break;
+        case 10: DDay=(31+28+31+30+31+30+31+31+30)+birthday;break;
+        case 11: DDay=(31+28+31+30+31+30+31+31+30+31)+birthday;break;
+        case 12: DDay=(31+28+31+30+31+30+31+31+30+31+30)+birthday;break;
+
+    }
+
+printf("请输入 您的出生年份  分别输入公历的 年 月 日 用空格键分开 \n");
+scanf("%d%d%d",&birthyear,&birthmonth,&birthday);
+printf("sum=DDay-Day=%d",sum);
+return 0;
+}
